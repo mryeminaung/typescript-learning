@@ -1,4 +1,5 @@
 import "./App.css";
+import ArrObj from "./learning/ArrObj";
 import DataTypes from "./learning/DataTypes";
 import SpecialTypes from "./learning/SpecialTypes";
 
@@ -16,7 +17,8 @@ function App() {
             <h1>React With Typescript</h1>
             <Welcome name="Creative Ninja" />
             {/* <DataTypes /> */}
-            <SpecialTypes />
+            {/* <SpecialTypes /> */}
+            <ArrObj />
         </>
     );
 }
