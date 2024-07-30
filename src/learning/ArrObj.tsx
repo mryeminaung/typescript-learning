@@ -53,8 +53,7 @@ function ArrObj() {
     let state: WindowStates = 'closed';
     let name: string | undefined;
 
-    let test: isOkay = 0;
-    name = 2;
+    let test: isOkay = true;
 
     console.log(state);
     console.log(test);
