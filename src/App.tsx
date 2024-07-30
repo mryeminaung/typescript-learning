@@ -5,6 +5,7 @@ import DataTypes from "./learning/DataTypes";
 import GenericType from "./learning/GenericType";
 import ReturnType from "./learning/ReturnType";
 import SpecialTypes from "./learning/SpecialTypes";
+import UseState from "./learning/hooks/UseState";
 
 type WelcomeProps = {
     name: string;
@@ -29,7 +30,6 @@ type PersonProps = {
 };
 
 const Person = ({ name, children }: PersonProps) => {
-    console.log(children);
     return (
         <div>
             <h1>
@@ -53,11 +53,13 @@ function App() {
             <Person name={personInfo}>
                 <p>Children of Person Component</p>
             </Person>
+            <hr />
             {/* <DataTypes /> */}
             {/* <SpecialTypes /> */}
             {/* <ArrObj /> */}
             {/* <ReturnType /> */}
             {/* <GenericType /> */}
+            <UseState />
         </>
     );
 }
