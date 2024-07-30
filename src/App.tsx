@@ -6,6 +6,7 @@ import GenericType from "./learning/GenericType";
 import ReturnType from "./learning/ReturnType";
 import SpecialTypes from "./learning/SpecialTypes";
 import UseState from "./learning/hooks/UseState";
+import UseReducer from "./learning/hooks/UseReducer";
 
 type WelcomeProps = {
     name: string;
@@ -59,7 +60,8 @@ function App() {
             {/* <ArrObj /> */}
             {/* <ReturnType /> */}
             {/* <GenericType /> */}
-            <UseState />
+            {/* <UseState /> */}
+            <UseReducer />
         </>
     );
 }
