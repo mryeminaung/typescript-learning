@@ -82,6 +82,29 @@ function App() {
     //         .then((data: null) => setTodos(data));
     // }, []);
 
+    interface Colorful {
+        color: string;
+    }
+    interface Circle {
+        radius: number;
+    }
+    interface Position {
+        position: {
+            x: number;
+            y: number;
+        };
+    }
+
+    type ColorfulCircle = Colorful & Circle & Position;
+
+    const cc: ColorfulCircle = {
+        color: "red",
+        radius: 12,
+        position: { x: 100, y: 200 },
+    };
+
+    console.log(cc);
+
     return (
         <div className="container mx-auto">
             {/* <h4>{JSON.stringify(task)}</h4> */}
