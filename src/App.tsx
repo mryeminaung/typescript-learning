@@ -9,6 +9,7 @@
 // import Button from "./learning/Button";
 
 import EnumType from "./learning/EnumType";
+import Test from "./learning/hooks/Test";
 
 type WelcomeProps = {
     name: string;
@@ -137,6 +138,9 @@ function App() {
             <Button setCount={setCount} color="brown" ha="ha" test="newProps">
                 Increment
             </Button> */}
+            <Test message="Hello World">
+                <p>This is a test component</p>
+            </Test>
         </div>
     );
 }
