@@ -9,25 +9,26 @@
 // import Button from "./learning/Button";
 // import Test from "./learning/hooks/Test";
 // import EnumType from "./learning/EnumType";
+// import Validation from "./learning/forms/Validation";
 
-import Validation from "./learning/forms/Validation";
+import ValidationTwo from "./learning/forms/ValidationTwo";
 
-type WelcomeProps = {
-    name: string;
-    age: 20 | 22 | 24;
-    isStudent: boolean;
-    padding?: [number, number, number, number];
-};
+// type WelcomeProps = {
+//     name: string;
+//     age: 20 | 22 | 24;
+//     isStudent: boolean;
+//     padding?: [number, number, number, number];
+// };
 
-const Welcome = ({ name, age, ...rest }: WelcomeProps): React.JSX.Element => {
-    console.log(rest);
+// const Welcome = ({ name, age, ...rest }: WelcomeProps): React.JSX.Element => {
+//     console.log(rest);
 
-    return (
-        <h2 className="text-2xl">
-            Hello, {name}, Age is {age}
-        </h2>
-    );
-};
+//     return (
+//         <h2 className="text-2xl">
+//             Hello, {name}, Age is {age}
+//         </h2>
+//     );
+// };
 
 // type ItemProps = {
 //     children: React.ReactNode;
@@ -126,7 +127,7 @@ function App() {
             ) : (
                 <h2>Fetching data</h2>
             )} */}
-            <hr />
+            {/* <hr /> */}
             {/* <DataTypes /> */}
             {/* <SpecialTypes /> */}
             {/* <ArrObj /> */}
@@ -142,7 +143,8 @@ function App() {
             {/* <Test message="Hello World">
                 <p>This is a test component</p>
             </Test> */}
-            <Validation />
+            {/* <Validation /> */}
+            <ValidationTwo />
         </div>
     );
 }
