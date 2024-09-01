@@ -7,9 +7,10 @@
 // import UseReducer from "./learning/hooks/UseReducer";
 // import React, { useState } from "react";
 // import Button from "./learning/Button";
+// import Test from "./learning/hooks/Test";
+// import EnumType from "./learning/EnumType";
 
-import EnumType from "./learning/EnumType";
-import Test from "./learning/hooks/Test";
+import Validation from "./learning/forms/Validation";
 
 type WelcomeProps = {
     name: string;
@@ -107,15 +108,15 @@ function App() {
     console.log(cc);
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto p-5">
             {/* <h4>{JSON.stringify(task)}</h4> */}
-            <h1 className="text-3xl">React With Typescript</h1>
-            <Welcome
+            <h1 className="text-3xl">React Hook Form + Zod (Typescript)</h1>
+            {/* <Welcome
                 padding={[1, 2, 3, 4]}
                 name="Creative Ninja"
                 age={20}
                 isStudent={false}
-            />
+            /> */}
             {/* {todos ? (
                 todos?.map((todo) => (
                     <Item key={todo.id} {...todo}>
@@ -133,14 +134,15 @@ function App() {
             {/* <GenericType /> */}
             {/* <UseState /> */}
             {/* <UseReducer /> */}
-            <EnumType />
+            {/* <EnumType /> */}
             {/* <h2>{count}</h2>
             <Button setCount={setCount} color="brown" ha="ha" test="newProps">
                 Increment
             </Button> */}
-            <Test message="Hello World">
+            {/* <Test message="Hello World">
                 <p>This is a test component</p>
-            </Test>
+            </Test> */}
+            <Validation />
         </div>
     );
 }
