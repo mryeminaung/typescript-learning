@@ -1,17 +1,17 @@
-// import ArrObj from "./learning/ArrObj";
-// import DataTypes from "./learning/DataTypes";
-// import GenericType from "./learning/GenericType";
-// import ReturnType from "./learning/ReturnType";
-// import SpecialTypes from "./learning/SpecialTypes";
-// import UseState from "./learning/hooks/UseState";
-// import UseReducer from "./learning/hooks/UseReducer";
+// import ArrObj from "@learning/ArrObj";
+// import DataTypes from "@learning/DataTypes";
+// import GenericType from "@learning/GenericType";
+// import ReturnType from "@learning/ReturnType";
+// import SpecialTypes from "@learning/SpecialTypes";
+// import UseState from "@learning/hooks/UseState";
+// import UseReducer from "@learning/hooks/UseReducer";
 // import React, { useState } from "react";
-// import Button from "./learning/Button";
-// import Test from "./learning/hooks/Test";
-// import EnumType from "./learning/EnumType";
-// import Validation from "./learning/forms/Validation";
+// import Button from "@learning/Button";
+// import Test from "@learning/hooks/Test";
+// import EnumType from "@learning/EnumType";
+// import Validation from "@learning/forms/Validation";
 
-import ValidationTwo from "./learning/forms/ValidationTwo";
+import ValidationTwo from "@learning/forms/ValidationTwo";
 
 // type WelcomeProps = {
 //     name: string;
@@ -144,7 +144,7 @@ function App() {
                 <p>This is a test component</p>
             </Test> */}
             {/* <Validation /> */}
-            <ValidationTwo />
+            <ValidationTwo/>
         </div>
     );
 }

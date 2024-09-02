@@ -1,5 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
 import { z } from "zod";
 
 const schema = z
@@ -14,13 +15,14 @@ const schema = z
             .min(5, { message: "Password must contain at least 5 characters" }),
         confirmPassword: z
             .string()
-            .min(5, { message: "Passwords don't match" }),
+            .min(5, { message: "Passwords do not match" }),
         terms: z.boolean(),
         age: z
             .number()
             .min(18, { message: "You're not allowed to register" })
             .max(65, { message: "Age must be under 65 years" }),
-        // gender: z.enum(["male", "female", "other"]),
+        gender: z.enum(["male", "female", "other"]),
+        skills: z.string().array().length(3),
         // address: z.object({
         //     street: z.string().min(5).max(50),
         //     city: z.string().min(2).max(50),
@@ -38,19 +40,24 @@ type FormSchema = z.infer<typeof schema>;
 const ValidationTwo = () => {
     const {
         register,
+        control,
         handleSubmit,
         formState: { errors },
+        watch,
     } = useForm<FormSchema>({
         resolver: zodResolver(schema),
     });
 
+    const selectedSkills = watch("skills");
+
     const onSubmit = (data: FormSchema) => {
         console.log(data);
+        console.log(selectedSkills);
     };
 
     return (
         <form
-            className="mt-4"
+            className="mt-4 dark:bg-slate-200 p-10 rounded-md"
             action=""
             method="post"
             onSubmit={handleSubmit(onSubmit)}
@@ -82,6 +89,85 @@ const ValidationTwo = () => {
             {errors.age && (
                 <span className="text-red-500">{errors.age.message}</span>
             )}
+            <p className="mt-2">Skills : </p>
+            {/* checkbox inputs */}
+            <div className="space-y-2">
+                <div className="flex items-center gap-x-2">
+                    <input
+                        className="border rounded-md p-2"
+                        {...register("skills")}
+                        type="checkbox"
+                        name="react"
+                        id="react"
+                        value="react"
+                    />
+                    <label htmlFor="react">React</label>
+                </div>
+                <div className="flex items-center gap-x-2">
+                    <input
+                        className="border rounded-md p-2"
+                        {...register("skills")}
+                        type="checkbox"
+                        name="laravel"
+                        id="laravel"
+                        value="laravel"
+                    />
+                    <label htmlFor="laravel">Laravel</label>
+                </div>
+                <div className="flex items-center gap-x-2">
+                    <input
+                        className="border rounded-md p-2"
+                        {...register("skills")}
+                        type="checkbox"
+                        name="python"
+                        id="python"
+                        value="python"
+                    />
+                    <label htmlFor="python">Python</label>
+                </div>
+            </div>
+            {/* radio inputs */}
+            <p className="mt-2">Select your gender : </p>
+            <div className="space-y-2">
+                <div className="flex items-center gap-x-2">
+                    <input
+                        className="border rounded-md p-2"
+                        {...register("gender")}
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male"
+                    />
+                    <label htmlFor="male">Male</label>
+                </div>
+                <div className="flex items-center gap-x-2">
+                    <input
+                        className="border rounded-md p-2"
+                        {...register("gender")}
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                    />
+                    <label htmlFor="female">Female</label>
+                </div>
+                <div className="flex items-center gap-x-2">
+                    <input
+                        className="border rounded-md p-2"
+                        {...register("gender")}
+                        type="radio"
+                        name="gender"
+                        id="other"
+                        value="other"
+                    />
+                    <label htmlFor="other">Other</label>
+                </div>
+                {errors.gender && (
+                    <span className="text-red-500">
+                        {errors.gender.message}
+                    </span>
+                )}
+            </div>
             <input
                 className="border block w-full mt-2 mb-1 rounded-md p-2"
                 {...register("password")}
@@ -110,7 +196,8 @@ const ValidationTwo = () => {
                 <label htmlFor="terms">Accept the terms and conditions</label>
             </div>
             <br />
-            <button className="bg-slate-200 p-2 rounded-md">Submit</button>
+            <button className="bg-slate-200 dark:bg-slate-400 p-2 rounded-md">Submit</button>
+            <DevTool control={control} /> {/* set up the dev tool */}
         </form>
     );
 };
