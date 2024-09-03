@@ -7,7 +7,14 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+
+    // "baseUrl": "/",
+    "paths": {
+      "@learning/*": ["./src/learning/*"],
+      "@components/*": ["./src/components/*"]
+    },
+
   },
   "include": ["vite.config.ts"]
 }

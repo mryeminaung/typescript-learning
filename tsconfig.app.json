@@ -22,13 +22,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
-    "baseUrl": "./",
-    "paths": {
-      "@learning/*": ["src/learning/*"],
-      "@components/*": ["src/components/*"]
-    },
-
   },
   "include": ["src"]
 }
