@@ -1,6 +1,6 @@
 // import { PropsWithChildren } from "react";
 /* includ children prop declaration */
-import { GoalProps } from "../../App";
+import { GoalProps } from "../../App1";
 // interface CourseGoalProps {
 //     title: string;
 //     description: string;

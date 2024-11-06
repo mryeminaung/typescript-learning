@@ -1,4 +1,4 @@
-import { GoalProps } from "../../App";
+import { GoalProps } from "../../App1";
 import CourseGoal from "./CourseGoal";
 
 /* 

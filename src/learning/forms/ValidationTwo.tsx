@@ -77,7 +77,7 @@ const ValidationTwo = () => {
                 className="border block w-full mt-2 mb-1 rounded-md p-2"
                 {...register("email")}
                 type="email"
-            />
+            />  
             {errors.email && (
                 <span className="text-red-500">{errors.email.message}</span>
             )}

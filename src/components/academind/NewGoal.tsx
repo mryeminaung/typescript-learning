@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { GoalProps } from "../../App";
+import { GoalProps } from "../../App1";
 import { v4 as uuidv4 } from "uuid";
 
 type NewGoalProps = {
